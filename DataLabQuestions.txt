@@ -1,0 +1,67 @@
+# Question 1 Regression 
+                                 OLS Regression Results
+=======================================================================================
+Dep. Variable:                 visits   R-squared (uncentered):                   0.677
+Model:                            OLS   Adj. R-squared (uncentered):              0.664
+Method:                 Least Squares   F-statistic:                              53.54
+Date:                Thu, 03 Jun 2021   Prob (F-statistic):                    9.53e-30
+Time:                        19:14:48   Log-Likelihood:                         -445.67
+No. Observations:                 133   AIC:                                      901.3
+Df Residuals:                     128   BIC:                                      915.8
+Df Model:                           5
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+age            0.0172      0.050      0.346      0.730      -0.081       0.116
+gender         2.5791      1.195      2.158      0.033       0.214       4.944
+educat         0.4881      0.419      1.165      0.246      -0.341       1.317
+income        -0.0038      0.321     -0.012      0.990      -0.639       0.631
+status         1.0880      1.666      0.653      0.515      -2.208       4.384
+==============================================================================
+Omnibus:                        9.001   Durbin-Watson:                   1.789
+Prob(Omnibus):                  0.011   Jarque-Bera (JB):                4.221
+Skew:                           0.180   Prob(JB):                        0.121
+Kurtosis:                       2.205   Cond. No.                         192.
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Evaluation: 
+Based on the P-values it looks like gender is the only category correlated to number of visits. So we would only keep gender in our final model. 
+
+# Question 2 Regression 
+                                 OLS Regression Results
+=======================================================================================
+Dep. Variable:                  recom   R-squared (uncentered):                   0.939
+Model:                            OLS   Adj. R-squared (uncentered):              0.937
+Method:                 Least Squares   F-statistic:                              615.6
+Date:                Thu, 03 Jun 2021   Prob (F-statistic):                   2.42e-119
+Time:                        19:21:38   Log-Likelihood:                         -464.12
+No. Observations:                 205   AIC:                                      938.2
+Df Residuals:                     200   BIC:                                      954.9
+Df Model:                           5
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+status         4.7200      0.152     31.093      0.000       4.421       5.019
+weight         0.3609      0.363      0.994      0.321      -0.355       1.077
+classes        0.3980      0.386      1.032      0.303      -0.363       1.159
+station       -0.1223      0.513     -0.238      0.812      -1.133       0.889
+pool           0.7425      0.349      2.124      0.035       0.053       1.432
+==============================================================================
+Omnibus:                       11.251   Durbin-Watson:                   2.018
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               19.734
+Skew:                           0.262   Prob(JB):                     5.19e-05
+Kurtosis:                       4.427   Cond. No.                         6.20
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Answer: 
+For the final model we would only keep status and pool because the rest are higher than the default alpha = .05 
